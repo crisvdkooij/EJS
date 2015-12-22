@@ -9,3 +9,6 @@ for(i = 1; i <= 100; i++) {
   }
   console.log(Ans === "" ? i : Ans);
 }
+
+//Alternative given by the book for the last part
+//  console.log(Ans || i);
