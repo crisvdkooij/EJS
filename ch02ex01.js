@@ -10,3 +10,10 @@ for (i = 0; i < 7; i++) {
   console.log(hashes += "#");
 }
 */
+
+//Suggested solution from book is more elegant than my alternate solution
+/*
+for (var line = "#"; line.length < 8; line += "#"){
+  console.log(line);
+}
+/*
