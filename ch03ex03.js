@@ -1,11 +1,7 @@
 // Bean counting
 
 function countBs(str) {
-  var charCount = 0;
-  for(i = 0; i < str.length; i++)
-    if(str.charAt(i) === "B")
-      charCount++;
-  return(charCount);
+  return countChar(str,'B');
 }
 
 /* Solution following book instructions
