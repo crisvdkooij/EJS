@@ -1,6 +1,7 @@
 // The sum of a range
 function range(start, end, step) {
-  step = step || 1;
+  if (!step)
+    step = start < end ? 1 : -1;
   var numArray = [];
   console.log(i <= end);
   for(i = start; i <= end; i += step)
