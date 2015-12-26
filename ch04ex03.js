@@ -10,6 +10,19 @@ function arrayToList(arr) {
   }
 }
 
+/*
+// Book solution
+function arrayToList(array) {
+  var list = null;
+  for (var i = array.length - 1; i >= 0; i--)
+    list = {value: array[i], rest: list};
+  return list;
+}
+
+
+*/
+
+
 function listToArray(list) {
   var arr = []
   for(var node = list; node; node = node.rest)
@@ -27,6 +40,18 @@ function nth(list, num) {
     obj = list.rest;
   return obj.value;
 }
+
+/*
+// Book solution
+function nth(list, n) {
+  if (!list)
+    return undefined;
+  else if (n == 0)
+    return list.value;
+  else
+    return nth(list.rest, n - 1);
+}
+*/
 
 console.log(arrayToList([10, 20]));
 // → {value: 10, rest: {value: 20, rest: null}}
