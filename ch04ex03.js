@@ -1,13 +1,31 @@
 // Your code here.
 
+
 function arrayToList(arr) {
   if(arr.length === 0){
     return(null);
   } else {
   	element = arr.shift();
-    console.log(arr);
   	return({value: element, rest: arrayToList(arr)});
   }
+}
+
+function listToArray(list) {
+  var arr = []
+  for(var node = list; node; node = node.rest)
+    arr.push(node.value);
+  return arr;
+}
+
+function prepend(element, list) {
+  return{value: element, rest: list}
+}
+
+function nth(list, num) {
+  var obj = {};
+  for (i = 0; i < num; i++)
+    obj = list.rest;
+  return obj.value;
 }
 
 console.log(arrayToList([10, 20]));
